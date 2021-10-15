@@ -6,6 +6,8 @@ module "vpc" {
 	for_each = toset([ for account in local.aws_accounts: account.id ])
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.8.0"
-	alias = "${aws_}each.value"
+	providers = {
+    aws = "${aws_}each.value"
+	}
   # insert the 21 required variables here
 }
