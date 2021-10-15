@@ -1,8 +1,8 @@
 provider "aws" {
     alias = "aws_262534729993"
-		access_key = data.vault_aws_access_credentials.262534729993.access_key
-	  secret_key = data.vault_aws_access_credentials.262534729993.secret_key
-		token = data.vault_aws_access_credentials.262534729993.security_token
+		access_key = data.vault_aws_access_credentials.aws_262534729993.access_key
+	  secret_key = data.vault_aws_access_credentials.aws_262534729993.secret_key
+		token = data.vault_aws_access_credentials.aws_262534729993.security_token
 }
 
 data "vault_aws_access_credentials" "aws_262534729993" {
